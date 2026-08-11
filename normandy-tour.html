@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Нормандия и побережье Ла-Манша - Matryoshka Travel</title>
+  <meta name="description" content="Индивидуальное путешествие по Нормандии на 3 дня: Сен-Мало, Канкаль, Мон-Сен-Мишель, Этрета, Онфлер, Трувиль и Довиль.">
+  <style>
+    :root {
+      --ink: #132941;
+      --muted: #647079;
+      --paper: #f4efe7;
+      --white: #fffdf8;
+      --soft: #eaf2f3;
+      --navy: #0d2d4d;
+      --blue: #356f86;
+      --gold: #bd934f;
+      --line: rgba(19, 41, 65, .14);
+      --shadow: 0 18px 46px rgba(13, 45, 77, .14);
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      padding: 24px;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(9, 31, 52, .88), rgba(9, 31, 52, .38) 55%, rgba(9, 31, 52, .08)),
+        url("assets/normandy/etretat-hero.jpg") center / cover;
+    }
+
+    .nav {
+      position: absolute;
+      top: 22px;
+      left: 24px;
+      right: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: rgba(255, 255, 255, .92);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a { text-decoration: none; }
+
+    .wrap,
+    .section {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero-copy {
+      width: min(720px, 100%);
+      padding: 104px 0 36px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      max-width: 100%;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 253, 248, .92);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      max-width: 700px;
+      font-size: clamp(48px, 7.4vw, 82px);
+      line-height: .95;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .9);
+      font-size: clamp(18px, 2vw, 22px);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      max-width: 100%;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 900;
+      white-space: normal;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: white;
+    }
+
+    .button.secondary {
+      border-color: rgba(255, 255, 255, .55);
+      background: rgba(255, 255, 255, .12);
+      color: white;
+      backdrop-filter: blur(8px);
+    }
+
+    .section {
+      padding: 68px 24px;
+    }
+
+    .kicker {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 790px;
+      margin-top: 10px;
+      font-size: clamp(34px, 4.4vw, 54px);
+      line-height: 1.02;
+    }
+
+    h3 {
+      font-size: 27px;
+      line-height: 1.08;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .date-card,
+    .day,
+    .info-card,
+    .price-card,
+    .form-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(13, 45, 77, .08);
+    }
+
+    .date-card {
+      min-height: 128px;
+      padding: 20px;
+    }
+
+    .date-card strong {
+      display: block;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .date-card span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .cream {
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr .8fr;
+      grid-template-rows: 250px 250px;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .gallery figure {
+      overflow: hidden;
+      margin: 0;
+      border-radius: 8px;
+      background: #dce8ea;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery figure:first-child {
+      grid-row: span 2;
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .day {
+      overflow: hidden;
+    }
+
+    .day-photo {
+      height: 210px;
+      background: #dce8ea;
+    }
+
+    .day-body {
+      padding: 22px;
+    }
+
+    .num {
+      display: inline-flex;
+      margin-bottom: 14px;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    ul {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .photo {
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 16 / 10;
+      background: #dce8ea;
+      box-shadow: var(--shadow);
+    }
+
+    .copy {
+      display: grid;
+      gap: 18px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .info-card {
+      padding: 22px;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: start;
+    }
+
+    .price-card,
+    .form-card {
+      padding: 28px;
+    }
+
+    .amount {
+      margin: 12px 0 18px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(70px, 10vw, 112px);
+      line-height: .86;
+    }
+
+    .amount span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .bot-field {
+      display: none;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid rgba(19, 41, 65, .22);
+      border-radius: 8px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      padding: 11px 12px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .submit {
+      min-height: 52px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--navy);
+      color: white;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 24px;
+      background: var(--navy);
+      color: rgba(255, 255, 255, .86);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .dates,
+      .days,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px 220px;
+      }
+
+      .gallery figure:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .split,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      h1 {
+        max-width: 100%;
+        font-size: clamp(40px, 11vw, 58px);
+        line-height: 1;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero,
+      .section {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 18px;
+        padding-bottom: 34px;
+        background:
+          linear-gradient(180deg, rgba(9, 31, 52, .2), rgba(9, 31, 52, .92)),
+          url("assets/normandy/etretat-hero.jpg") 55% center / cover;
+      }
+
+      .nav {
+        left: 16px;
+        right: 16px;
+      }
+
+      .nav span { display: none; }
+
+      .hero-copy {
+        padding-top: 104px;
+        padding-bottom: 0;
+      }
+
+      .eyebrow {
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 1.25;
+      }
+
+      h1 {
+        font-size: clamp(38px, 12vw, 54px);
+      }
+
+      h2 {
+        font-size: clamp(31px, 9vw, 42px);
+      }
+
+      .lead {
+        font-size: 17px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 220px);
+      }
+
+      .gallery figure:first-child {
+        grid-column: auto;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="Навигация">
+      <a href="index.html">← Все направления</a>
+      <span>Matryoshka Travel</span>
+    </nav>
+
+    <div class="wrap">
+      <section class="hero-copy">
+        <span class="eyebrow">Индивидуальное путешествие · 3 дня</span>
+        <h1>Нормандия и побережье Ла-Манша</h1>
+        <p class="lead">Белые скалы Этрета, устричный Канкаль, вечерний Мон-Сен-Мишель, Онфлер, Трувиль и Довиль в спокойном авторском маршруте.</p>
+        <div class="actions">
+          <a class="button primary" href="#order">Хочу в тур</a>
+          <a class="button secondary" href="https://wa.me/33667033170?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D1%82%D1%83%D1%80%20%D0%9D%D0%BE%D1%80%D0%BC%D0%B0%D0%BD%D0%B4%D0%B8%D1%8F%20%D0%B8%20%D0%BF%D0%BE%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D1%8C%D0%B5%20%D0%9B%D0%B0-%D0%9C%D0%B0%D0%BD%D1%88%D0%B0.%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%B4%D0%B0%D1%82%D1%83%20%D0%B8%20%D0%BC%D0%B5%D1%81%D1%82%D0%B0." target="_blank" rel="noopener">Написать в WhatsApp</a>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <span class="kicker">Ближайшие даты</span>
+      <h2>Три заезда по одному маршруту</h2>
+      <div class="dates">
+        <article class="date-card"><strong>18-20 августа</strong><span>3 дня / 2 ночи</span></article>
+        <article class="date-card"><strong>17-19 сентября</strong><span>3 дня / 2 ночи</span></article>
+        <article class="date-card"><strong>7-9 октября</strong><span>3 дня / 2 ночи</span></article>
+      </div>
+    </section>
+
+    <section class="cream">
+      <div class="section">
+        <span class="kicker">Атмосфера маршрута</span>
+        <h2>Океан, старые порты, нормандские дома и ужины у воды</h2>
+        <div class="gallery" aria-label="Фотографии Нормандии">
+          <figure><img src="assets/normandy/etretat-wide.jpg" alt="Скалы Этрета"></figure>
+          <figure><img src="assets/normandy/oysters.jpg" alt="Устрицы у моря"></figure>
+          <figure><img src="assets/normandy/honfleur-harbor.jpg" alt="Порт Онфлера"></figure>
+          <figure><img src="assets/normandy/village-house.jpg" alt="Нормандский дом"></figure>
+          <figure><img src="assets/normandy/mont-night.jpg" alt="Мон-Сен-Мишель вечером"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="kicker">Маршрут</span>
+      <h2>Три дня по самым красивым точкам Нормандии</h2>
+      <div class="days">
+        <article class="day">
+          <div class="day-photo"><img src="assets/normandy/saint-malo-walk.jpg" alt="Прогулка у моря"></div>
+          <div class="day-body">
+            <span class="num">1</span>
+            <h3>Сен-Мало, Канкаль и Мон-Сен-Мишель</h3>
+            <ul>
+              <li>Прогулка по городу корсаров Сен-Мало</li>
+              <li>Устрицы в Канкале с видом на залив</li>
+              <li>Заселение на Мон-Сен-Мишель</li>
+              <li>Вечерняя прогулка к аббатству</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-photo"><img src="assets/normandy/cliffs-sea.jpg" alt="Меловые скалы Нормандии"></div>
+          <div class="day-body">
+            <span class="num">2</span>
+            <h3>Этрета</h3>
+            <ul>
+              <li>Меловые скалы, арки и утесы Аваль и Амон</li>
+              <li>Сады Этрета над Ла-Маншем</li>
+              <li>Время для прогулок, кафе и красивых видов</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-photo"><img src="assets/normandy/trouville-lighthouse.jpg" alt="Променад у моря"></div>
+          <div class="day-body">
+            <span class="num">3</span>
+            <h3>Онфлер, Трувиль и Довиль</h3>
+            <ul>
+              <li>Онфлер: старый порт и художественные галереи</li>
+              <li>Трувиль: рыбный рынок и морепродукты</li>
+              <li>Довиль: променад, виллы Belle Epoque и курортная атмосфера</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cream">
+      <div class="section split">
+        <div class="photo">
+          <img src="assets/normandy/mont-soft.jpg" alt="Мон-Сен-Мишель в мягком свете">
+        </div>
+        <div class="copy">
+          <span class="kicker">Формат</span>
+          <h2>Индивидуальная авторская программа без лишней суеты</h2>
+          <p>Это путешествие для тех, кто хочет увидеть разные стороны Нормандии за три дня: океан, старинные города, гастрономию, вечерний Мон-Сен-Мишель и атмосферные курорты.</p>
+          <p>Около 19:00 путешествие завершается на железнодорожном вокзале Довиля. При желании можно продолжить поездку в Париж или другой город Франции.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="kicker">Условия</span>
+      <h2>Что входит в программу</h2>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>В стоимость входит</h3>
+          <ul>
+            <li>Индивидуальная авторская программа на 3 дня</li>
+            <li>Сопровождение русскоговорящего гида</li>
+            <li>Все трансферы по программе</li>
+            <li>Встреча в Ренне в первый день</li>
+            <li>Завершение программы на вокзале Довиля</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Не входит</h3>
+          <ul>
+            <li>Проживание</li>
+            <li>Питание</li>
+            <li>Входные билеты в музеи, аббатство и сады</li>
+            <li>Личные расходы</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="cream">
+      <div class="section price-grid" id="order">
+        <aside class="price-card">
+          <span class="kicker">Стоимость программы</span>
+          <div class="amount">450 €<span>за 1 человека</span></div>
+          <ul>
+            <li>Бронирование после подтверждения даты</li>
+            <li>Маршрут можно обсудить под ваш темп</li>
+            <li>Подходит для индивидуального путешествия или небольшой компании</li>
+          </ul>
+          <a class="button primary" href="https://wa.me/33667033170?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D1%82%D1%83%D1%80%20%D0%9D%D0%BE%D1%80%D0%BC%D0%B0%D0%BD%D0%B4%D0%B8%D1%8F%20%D0%B8%20%D0%BF%D0%BE%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D1%8C%D0%B5%20%D0%9B%D0%B0-%D0%9C%D0%B0%D0%BD%D1%88%D0%B0.%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B4%D0%B0%D1%82%D0%B0%3A%20___." target="_blank" rel="noopener">Спросить в WhatsApp</a>
+        </aside>
+
+        <section class="form-card">
+          <span class="kicker">Заявка</span>
+          <h2>Хочу в тур</h2>
+          <p>Заполните форму, и я отвечу по датам, маршруту, местам и деталям бронирования.</p>
+
+          <form name="normandy-coast-tour" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
+            <input type="hidden" name="form-name" value="normandy-coast-tour">
+            <p class="bot-field">
+              <label>Не заполняйте это поле: <input name="bot-field"></label>
+            </p>
+
+            <label>
+              Ваше имя
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+
+            <label>
+              WhatsApp или Telegram
+              <input type="text" name="contact" autocomplete="tel" placeholder="+33..." required>
+            </label>
+
+            <div class="form-row">
+              <label>
+                Дата тура
+                <select name="tour_date" required>
+                  <option value="">Выберите дату</option>
+                  <option>18-20 августа</option>
+                  <option>17-19 сентября</option>
+                  <option>7-9 октября</option>
+                </select>
+              </label>
+
+              <label>
+                Количество человек
+                <select name="people" required>
+                  <option value="">Выберите</option>
+                  <option>1 человек</option>
+                  <option>2 человека</option>
+                  <option>3 человека</option>
+                  <option>4 человека</option>
+                  <option>5+ человек</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Что вы хотите в этом туре?
+              <textarea name="wish" placeholder="Например: больше гастрономии, Этрета, Мон-Сен-Мишель, красивые фото, спокойный темп, помощь с отелем..."></textarea>
+            </label>
+
+            <label>
+              Комментарий
+              <textarea name="message" placeholder="Можно написать про город прибытия, проживание, питание, темп поездки или вопросы по маршруту."></textarea>
+            </label>
+
+            <button class="submit" type="submit">Отправить заявку</button>
+            <div class="small">Форма подготовлена для Netlify Forms. Для быстрого ответа можно написать сразу в WhatsApp.</div>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-strip">
+    <span>WhatsApp / Telegram: +33 6 67 03 31 70</span>
+    <span>Нормандия · Побережье Ла-Манша</span>
+    <span>Matryoshka Travel</span>
+  </footer>
+</body>
+</html>

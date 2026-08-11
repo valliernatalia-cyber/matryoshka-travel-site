@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matryoshka Travel - выберите поездку</title>
+  <meta name="description" content="Туры и гиды Matryoshka Travel: Мон-Сен-Мишель, гастрономия, Нормандия и самостоятельные маршруты.">
+  <style>
+    :root {
+      --ink: #223027;
+      --muted: #68746b;
+      --paper: #f5efe6;
+      --white: #fffdf8;
+      --line: rgba(34, 48, 39, .15);
+      --green: #466552;
+      --gold: #c6923f;
+      --red: #9a5047;
+      --blue: #477585;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: end;
+      padding: 22px;
+      background:
+        linear-gradient(180deg, rgba(20, 31, 25, .2), rgba(20, 31, 25, .88)),
+        url("assets/mont-hero.jpg") center / cover;
+    }
+
+    .wrap {
+      width: min(780px, 100%);
+      margin: 0 auto;
+      padding: 26px 0 10px;
+    }
+
+    .brand {
+      margin-bottom: 22px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 680px;
+      color: white;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(39px, 10vw, 76px);
+      font-weight: 500;
+      line-height: .96;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 560px;
+      margin: 16px 0 24px;
+      color: rgba(255, 255, 255, .86);
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .menu {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      min-height: 104px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 8px;
+      background: rgba(255, 253, 248, .94);
+      text-decoration: none;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, .18);
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-2px);
+      background: white;
+    }
+
+    .photo {
+      width: 92px;
+      min-height: 104px;
+      background: #d7cec0;
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .body {
+      display: grid;
+      align-content: center;
+      gap: 4px;
+      padding: 15px 16px;
+    }
+
+    .label {
+      width: fit-content;
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: white;
+      background: var(--green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .item:nth-child(2) .label { background: var(--red); }
+    .item:nth-child(3) .label { background: var(--blue); }
+    .item:nth-child(4) .label { background: var(--gold); }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(24px, 5vw, 32px);
+      font-weight: 500;
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding: 16px;
+        background:
+          linear-gradient(180deg, rgba(20, 31, 25, .12), rgba(20, 31, 25, .9)),
+          url("assets/mont-hero.jpg") 58% center / cover;
+      }
+
+      .wrap {
+        padding-bottom: 0;
+      }
+
+      .brand {
+        margin-bottom: 16px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .item {
+        grid-template-columns: 84px minmax(0, 1fr);
+        min-height: 100px;
+      }
+
+      .photo {
+        width: 84px;
+        min-height: 100px;
+      }
+
+      .body {
+        padding: 13px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <div class="wrap">
+      <div class="brand">Matryoshka Travel</div>
+      <h1>Что вам интересно?</h1>
+      <p class="lead">Выберите направление, и я покажу подходящий вариант поездки или гида.</p>
+
+      <nav class="menu" aria-label="Выбор направления">
+        <a class="item" href="mont-saint-michel-tour.html">
+          <span class="photo"><img src="assets/mont-bay.jpg" alt=""></span>
+          <span class="body">
+            <span class="label">Индивидуально</span>
+            <h2>Тур в Мон-Сен-Мишель</h2>
+            <p>Авторский маршрут с сопровождением.</p>
+          </span>
+        </a>
+
+        <a class="item" href="gastronomic-group-tour.html">
+          <span class="photo"><img src="assets/oysters.jpg" alt=""></span>
+          <span class="body">
+            <span class="label">Группа</span>
+            <h2>Гастрономический тур</h2>
+            <p>Устрицы, сидр, сыры и локальные места.</p>
+          </span>
+        </a>
+
+        <a class="item" href="normandy-tour.html">
+          <span class="photo"><img src="assets/seafood.jpg" alt=""></span>
+          <span class="body">
+            <span class="label">Нормандия</span>
+            <h2>Тур в Нормандию</h2>
+            <p>Маршрут по региону и красивым локациям.</p>
+          </span>
+        </a>
+
+        <a class="item" href="https://msm.matryoshkatravel.fr/">
+          <span class="photo"><img src="assets/mont-hero.jpg" alt=""></span>
+          <span class="body">
+            <span class="label">Самостоятельно</span>
+            <h2>Гайды для путешественников</h2>
+            <p>Цифровые маршруты и практические советы.</p>
+          </span>
+        </a>
+      </nav>
+
+      <div class="footer">Бретань · Нормандия · Мон-Сен-Мишель</div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,685 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мон-Сен-Мишель и Канкаль за один день - Matryoshka Travel</title>
+  <meta name="description" content="Индивидуальный однодневный тур из Ренна: Канкаль, устричный рынок, Мон-Сен-Мишель, аббатство и панорамные виды.">
+  <style>
+    :root {
+      --ink: #2c251e;
+      --muted: #776b5f;
+      --paper: #efe5d5;
+      --paper-soft: #f8f2e8;
+      --white: #fffaf2;
+      --brown: #7a4d32;
+      --brown-dark: #4b3022;
+      --gold: #be8d49;
+      --sage: #687363;
+      --line: rgba(44, 37, 30, .16);
+      --shadow: 0 20px 58px rgba(53, 37, 24, .15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      padding: 24px;
+      color: white;
+      background:
+        linear-gradient(180deg, rgba(35, 28, 22, .08), rgba(35, 28, 22, .9)),
+        url("assets/flyer-extracted/page1-image1.jpg") center / cover;
+    }
+
+    .nav {
+      position: absolute;
+      top: 22px;
+      left: 24px;
+      right: 24px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      color: rgba(255, 255, 255, .9);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero-card {
+      width: min(660px, 100%);
+      padding: 112px 0 34px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, .48);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, .94);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 630px;
+      font-size: clamp(44px, 6.4vw, 70px);
+      line-height: .96;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, .9);
+      font-size: clamp(18px, 2.1vw, 22px);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, .16);
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: white;
+    }
+
+    .button.secondary {
+      border-color: rgba(255, 255, 255, .5);
+      color: white;
+      background: rgba(255, 255, 255, .12);
+      backdrop-filter: blur(8px);
+    }
+
+    .section {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 68px 24px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(280px, .9fr) minmax(360px, 1.1fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .photo {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      background: #d7c8b4;
+    }
+
+    .photo.tall { aspect-ratio: 4 / 5; }
+    .photo.landscape { aspect-ratio: 16 / 10; }
+    .photo.wide { aspect-ratio: 16 / 9; }
+
+    .copy {
+      display: grid;
+      gap: 18px;
+    }
+
+    .kicker {
+      width: fit-content;
+      color: var(--brown);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 760px;
+      font-size: clamp(34px, 4.4vw, 52px);
+      line-height: 1.02;
+      overflow-wrap: anywhere;
+    }
+
+    h3 {
+      font-size: 28px;
+      line-height: 1.05;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .cream {
+      background: var(--paper-soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .step {
+      min-height: 230px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 34px rgba(53, 37, 24, .08);
+    }
+
+    .time {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: white;
+      background: var(--brown);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .step ul,
+    .bullets {
+      display: grid;
+      gap: 9px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .step li,
+    .bullets li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .step li::before,
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .benefit {
+      min-height: 124px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      font-weight: 800;
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .price-card,
+    .form-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .price-card {
+      display: grid;
+      align-content: space-between;
+      gap: 22px;
+      padding: 28px;
+    }
+
+    .amount {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(64px, 10vw, 110px);
+      line-height: .85;
+      color: var(--brown-dark);
+    }
+
+    .amount span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .details {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .details li {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .details strong { color: var(--ink); }
+
+    .form-card {
+      padding: 28px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .bot-field {
+      display: none;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid rgba(44, 37, 30, .22);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      padding: 11px 12px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .submit {
+      min-height: 52px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--brown);
+      color: white;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      padding: 22px 24px;
+      background: var(--brown-dark);
+      color: rgba(255, 255, 255, .85);
+      font-weight: 800;
+    }
+
+    @media (max-width: 1100px) {
+      .intro,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro {
+        gap: 24px;
+      }
+
+      .intro .photo,
+      .photo.tall {
+        aspect-ratio: 16 / 10;
+        max-height: 520px;
+      }
+    }
+
+    @media (max-width: 940px) {
+      .timeline,
+      .benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero,
+      .section {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero {
+        min-height: 86vh;
+        background:
+          linear-gradient(180deg, rgba(35, 28, 22, .08), rgba(35, 28, 22, .9)),
+          url("assets/flyer-extracted/page1-image1.jpg") 58% center / cover;
+      }
+
+      .nav {
+        left: 16px;
+        right: 16px;
+      }
+
+      .nav span { display: none; }
+
+      .hero-card {
+        padding-top: 78px;
+      }
+
+      .eyebrow {
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-size: clamp(43px, 14vw, 62px);
+      }
+
+      .actions,
+      .button,
+      .submit {
+        width: 100%;
+      }
+
+      .timeline,
+      .benefits,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: clamp(31px, 9vw, 42px);
+      }
+
+      .step {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="Навигация">
+      <a href="index.html">← Все направления</a>
+      <span>Matryoshka Travel</span>
+    </nav>
+
+    <div class="wrap">
+      <section class="hero-card">
+        <span class="eyebrow">Однодневное путешествие из Ренна</span>
+        <h1>Мон-Сен-Мишель & Канкаль</h1>
+        <p class="lead">Океанские пейзажи Бретани, устричный рынок Канкаля и прогулка по Мон-Сен-Мишелю без спешки и сложной логистики.</p>
+        <div class="actions">
+          <a class="button primary" href="#order">Оставить заявку</a>
+          <a class="button secondary" href="https://wa.me/33667033170?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B8%D0%BD%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%82%D1%83%D1%80%20%D0%9C%D0%BE%D0%BD-%D0%A1%D0%B5%D0%BD-%D0%9C%D0%B8%D1%88%D0%B5%D0%BB%D1%8C%20%26%20%D0%9A%D0%B0%D0%BD%D0%BA%D0%B0%D0%BB%D1%8C.%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%B4%D0%B0%D1%82%D1%83%20%D0%B8%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener">Написать в WhatsApp</a>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <div class="copy">
+        <span class="kicker">Канкаль + Мон-Сен-Мишель</span>
+        <h2>Спокойный день у моря, который не нужно собирать по кусочкам</h2>
+        <p>Вы встречаетесь в Ренне, садитесь в автомобиль и едете по готовому маршруту: сначала к морю и устричному рынку, затем к Мон-Сен-Мишелю, аббатству и лучшим панорамным точкам.</p>
+        <p>Если вы едете из Парижа, до Ренна удобно добраться на скоростном поезде TGV примерно за 1,5 часа.</p>
+      </div>
+      <div class="photo landscape">
+        <img src="assets/flyer-extracted/page2-image1.jpg" alt="Устрицы и белое вино у моря">
+      </div>
+    </section>
+
+    <section class="cream">
+      <div class="section">
+        <span class="kicker">Маршрут дня</span>
+        <h2>Один день, четыре понятных этапа</h2>
+
+        <div class="timeline">
+          <article class="step">
+            <span class="time">Утро</span>
+            <h3>Встреча в Ренне</h3>
+            <ul>
+              <li>Встреча на вокзале</li>
+              <li>Поездка в Канкаль</li>
+            </ul>
+          </article>
+
+          <article class="step">
+            <span class="time">День</span>
+            <h3>Канкаль</h3>
+            <ul>
+              <li>Устричный рынок</li>
+              <li>Дегустация устриц и вина у моря</li>
+            </ul>
+          </article>
+
+          <article class="step">
+            <span class="time">После обеда</span>
+            <h3>Мон-Сен-Мишель</h3>
+            <ul>
+              <li>Прогулка по острову</li>
+              <li>Посещение аббатства</li>
+              <li>Панорамные виды</li>
+            </ul>
+          </article>
+
+          <article class="step">
+            <span class="time">Вечер</span>
+            <h3>Возвращение</h3>
+            <ul>
+              <li>Возвращение в Ренн</li>
+              <li>Помощь с ориентиром по поездам</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="copy">
+        <span class="kicker">Почему выбирают этот тур</span>
+        <h2>Без лишней логистики и с живым сопровождением</h2>
+        <div class="benefits">
+          <div class="benefit">Поездка за 1 день</div>
+          <div class="benefit">Не нужно продумывать логистику самостоятельно</div>
+          <div class="benefit">Русскоязычное сопровождение</div>
+          <div class="benefit">Комфортный маршрут на автомобиле</div>
+          <div class="benefit">Красивые локации для фотографий</div>
+        </div>
+      </div>
+      <div class="photo landscape">
+        <img src="assets/flyer-extracted/page3-image2.jpg" alt="Мон-Сен-Мишель в солнечный день">
+      </div>
+    </section>
+
+    <section class="cream" id="order">
+      <div class="section price-grid">
+        <aside class="price-card">
+          <div>
+            <span class="kicker">Стоимость</span>
+            <div class="amount">490€<span>до 4 человек</span></div>
+          </div>
+
+          <ul class="details">
+            <li><strong>+50€</strong> за каждого дополнительного участника</li>
+            <li><strong>Не входит:</strong> билеты в аббатство, дегустация устриц и вина</li>
+            <li><strong>Бронирование:</strong> подтверждается по предоплате 50%</li>
+          </ul>
+
+          <a class="button primary" href="https://wa.me/33667033170?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B8%D0%BD%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%82%D1%83%D1%80%20%D0%9C%D0%BE%D0%BD-%D0%A1%D0%B5%D0%BD-%D0%9C%D0%B8%D1%88%D0%B5%D0%BB%D1%8C%20%26%20%D0%9A%D0%B0%D0%BD%D0%BA%D0%B0%D0%BB%D1%8C.%20%D0%9D%D0%B0%D1%81%20___%20%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%2C%20%D0%B4%D0%B0%D1%82%D0%B0%20___." target="_blank" rel="noopener">Спросить в WhatsApp</a>
+        </aside>
+
+        <section class="form-card">
+          <span class="kicker">Заявка на тур</span>
+          <h2>Уточнить дату</h2>
+          <p>Заполните короткую форму, и я отвечу по доступности, маршруту и деталям бронирования.</p>
+
+          <form name="mont-saint-michel-private-tour" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
+            <input type="hidden" name="form-name" value="mont-saint-michel-private-tour">
+            <p class="bot-field">
+              <label>Не заполняйте это поле: <input name="bot-field"></label>
+            </p>
+
+            <label>
+              Ваше имя
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+
+            <label>
+              WhatsApp или Telegram
+              <input type="text" name="contact" autocomplete="tel" placeholder="+33..." required>
+            </label>
+
+            <div class="form-row">
+              <label>
+                Желаемая дата
+                <input type="date" name="date">
+              </label>
+
+              <label>
+                Количество человек
+                <select name="people" required>
+                  <option value="">Выберите</option>
+                  <option>1 человек</option>
+                  <option>2 человека</option>
+                  <option>3 человека</option>
+                  <option>4 человека</option>
+                  <option>5 человек</option>
+                  <option>6+ человек</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Откуда вы будете ехать?
+              <select name="departure">
+                <option>Из Ренна</option>
+                <option>Из Парижа через Ренн</option>
+                <option>Пока не знаю</option>
+              </select>
+            </label>
+
+            <label>
+              Комментарий
+              <textarea name="message" placeholder="Например: едем с детьми, хотим больше времени на аббатство, интересует дегустация..."></textarea>
+            </label>
+
+            <button class="submit" type="submit">Отправить заявку</button>
+            <div class="small">Форма предназначена для сайта с Netlify Forms. Если вы хотите быстрее, напишите сразу в WhatsApp.</div>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-strip">
+    <span>WhatsApp / Telegram: +33 6 67 03 31 70</span>
+    <span>Instagram: matryoshka_in_france</span>
+    <span>Email: valliernatalia@gmail.com</span>
+  </footer>
+</body>
+</html>

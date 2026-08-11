@@ -1,0 +1,855 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Женский гастрономический тур в Бретань - Matryoshka Travel</title>
+  <meta name="description" content="Женский гастрономический тур Бретань и Мон-Сен-Мишель: 11-14 сентября, 28 сентября - 1 октября, 4-7 октября, 4 дня, группа до 6 человек, проживание 4*.">
+  <style>
+    :root {
+      --ink: #28241f;
+      --muted: #726a61;
+      --paper: #f1e6d7;
+      --soft: #fbf5ed;
+      --white: #fffaf3;
+      --rose: #9a5c57;
+      --rose-dark: #633b38;
+      --gold: #c4954e;
+      --sage: #617162;
+      --sea: #547989;
+      --line: rgba(40, 36, 31, .15);
+      --shadow: 0 18px 48px rgba(54, 40, 29, .14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      width: 100%;
+      padding: 24px;
+      color: white;
+      background:
+        linear-gradient(180deg, rgba(26, 24, 21, .12), rgba(26, 24, 21, .88)),
+        url("assets/women-bretagne/page1-image1.jpg") center / cover;
+    }
+
+    .nav {
+      position: absolute;
+      top: 22px;
+      left: 24px;
+      right: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: rgba(255, 255, 255, .9);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+
+    .wrap,
+    .section {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero-copy {
+      width: min(720px, 100%);
+      min-width: 0;
+      padding: 100px 0 34px;
+    }
+
+    .eyebrow,
+    .tag {
+      width: fit-content;
+      color: white;
+      background: rgba(154, 92, 87, .9);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow { padding: 8px 12px; }
+    .tag { padding: 6px 10px; }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      max-width: 720px;
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: .96;
+      overflow-wrap: anywhere;
+    }
+
+    .lead {
+      max-width: 650px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .9);
+      font-size: clamp(18px, 2vw, 22px);
+      overflow-wrap: anywhere;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+      max-width: 100%;
+    }
+
+    .button {
+      display: inline-flex;
+      max-width: 100%;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: white;
+    }
+
+    .button.secondary {
+      border-color: rgba(255, 255, 255, .5);
+      color: white;
+      background: rgba(255, 255, 255, .12);
+      backdrop-filter: blur(8px);
+    }
+
+    .section {
+      padding: 68px 24px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .copy {
+      display: grid;
+      gap: 18px;
+    }
+
+    .kicker {
+      color: var(--rose);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 760px;
+      font-size: clamp(34px, 4.4vw, 52px);
+      line-height: 1.02;
+    }
+
+    h3 {
+      font-size: 26px;
+      line-height: 1.08;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .photo {
+      overflow: hidden;
+      border-radius: 8px;
+      background: #d9cbbc;
+      box-shadow: var(--shadow);
+    }
+
+    .photo.landscape { aspect-ratio: 16 / 10; }
+    .photo.portrait { aspect-ratio: 4 / 5; }
+
+    .cream {
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .fact,
+    .day,
+    .benefit {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(54, 40, 29, .08);
+    }
+
+    .fact {
+      min-height: 130px;
+      padding: 18px;
+    }
+
+    .fact strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--rose-dark);
+      font-size: 22px;
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .day {
+      min-height: 250px;
+      padding: 20px;
+    }
+
+    .day-num {
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--rose);
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    ul {
+      display: grid;
+      gap: 9px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .7em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .taste-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .taste-grid span {
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--rose-dark);
+      font-weight: 800;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .benefit {
+      min-height: 128px;
+      padding: 18px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+
+    .host-card {
+      display: grid;
+      grid-template-columns: minmax(260px, .72fr) minmax(0, 1fr);
+      gap: 34px;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .host-photo {
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 4 / 5;
+    }
+
+    .host-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 42%;
+    }
+
+    .host-copy p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .host-copy p:last-child {
+      margin-bottom: 0;
+    }
+    .price-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: start;
+    }
+
+    .price-card,
+    .form-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .amount {
+      margin: 12px 0 18px;
+      color: var(--rose-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(64px, 10vw, 104px);
+      line-height: .86;
+    }
+
+    .amount span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .bot-field {
+      display: none;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid rgba(40, 36, 31, .22);
+      border-radius: 8px;
+      background: white;
+      color: var(--ink);
+      font: inherit;
+      padding: 11px 12px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .submit {
+      min-height: 52px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--rose);
+      color: white;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 24px;
+      background: var(--rose-dark);
+      color: rgba(255, 255, 255, .86);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .intro-grid,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .host-card {
+        grid-template-columns: 1fr;
+      }
+
+      .host-photo {
+        aspect-ratio: 16 / 11;
+      }
+
+      .facts,
+      .days,
+      .taste-grid,
+      .benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .photo.portrait {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero-copy {
+        width: 100%;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: clamp(38px, 10vw, 56px);
+        line-height: 1;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .host-card {
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .hero,
+      .section {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero {
+        min-height: auto;
+        align-items: end;
+        padding-top: 18px;
+        padding-bottom: 34px;
+        background:
+          linear-gradient(180deg, rgba(26, 24, 21, .1), rgba(26, 24, 21, .9)),
+          url("assets/women-bretagne/page1-image1.jpg") 58% center / cover;
+      }
+
+      .nav {
+        left: 16px;
+        right: 16px;
+      }
+
+      .nav span { display: none; }
+
+      .hero-copy {
+        width: 100%;
+        padding-top: 108px;
+        padding-bottom: 0;
+      }
+
+      .eyebrow {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-size: 11px;
+        line-height: 1.25;
+        text-align: center;
+        overflow-wrap: anywhere;
+      }
+
+      h1 {
+        font-size: clamp(35px, 10.5vw, 48px);
+        line-height: 1;
+        max-width: 100%;
+      }
+
+      .lead {
+        max-width: 100%;
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      h2 {
+        font-size: clamp(31px, 9vw, 42px);
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 12px;
+      }
+
+      .actions,
+      .button,
+      .submit {
+        width: 100%;
+      }
+
+      .button {
+        min-height: 56px;
+        padding: 14px 12px;
+      }
+
+      .facts,
+      .days,
+      .taste-grid,
+      .benefits,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .day,
+      .fact,
+      .benefit {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="Навигация">
+      <a href="index.html">← Все направления</a>
+      <span>Matryoshka Travel</span>
+    </nav>
+
+    <div class="wrap">
+      <section class="hero-copy">
+        <span class="eyebrow">11-14 сентября · 28 сентября - 1 октября · 4-7 октября</span>
+        <h1>Женский гастрономический тур в Бретань</h1>
+        <p class="lead">Сен-Мало, Канкаль, Ренн, Динан, сидрерия, устричная ферма, Мон-Сен-Мишель и спокойная поездка без спешки.</p>
+        <div class="actions">
+          <a class="button primary" href="#order">Хочу в тур</a>
+          <a class="button secondary" href="https://wa.me/33667033170?text=%d0%97%d0%b4%d1%80%d0%b0%d0%b2%d1%81%d1%82%d0%b2%d1%83%d0%b9%d1%82%d0%b5!+%d0%a5%d0%be%d1%87%d1%83+%d0%b2+%d0%b6%d0%b5%d0%bd%d1%81%d0%ba%d0%b8%d0%b9+%d0%b3%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%bd%d0%be%d0%bc%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9+%d1%82%d1%83%d1%80+%d0%91%d1%80%d0%b5%d1%82%d0%b0%d0%bd%d1%8c+%26+%d0%9c%d0%be%d0%bd-%d0%a1%d0%b5%d0%bd-%d0%9c%d0%b8%d1%88%d0%b5%d0%bb%d1%8c.+%d0%9f%d0%be%d0%b4%d1%81%d0%ba%d0%b0%d0%b6%d0%b8%d1%82%d0%b5%2c+%d0%bf%d0%be%d0%b6%d0%b0%d0%bb%d1%83%d0%b9%d1%81%d1%82%d0%b0%2c+%d0%ba%d0%b0%d0%ba%d0%b8%d0%b5+%d0%b4%d0%b0%d1%82%d1%8b+%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%bd%d1%8b%3a+11-14+%d1%81%d0%b5%d0%bd%d1%82%d1%8f%d0%b1%d1%80%d1%8f%2c+28+%d1%81%d0%b5%d0%bd%d1%82%d1%8f%d0%b1%d1%80%d1%8f+-+1+%d0%be%d0%ba%d1%82%d1%8f%d0%b1%d1%80%d1%8f+%d0%b8%d0%bb%d0%b8+4-7+%d0%be%d0%ba%d1%82%d1%8f%d0%b1%d1%80%d1%8f." target="_blank" rel="noopener">Написать в WhatsApp</a>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <span class="kicker">Формат поездки</span>
+      <h2>Камерная женская группа, гастрономия и океанский темп Бретани</h2>
+      <div class="facts">
+        <div class="fact"><strong>до 6 человек</strong><p>Маленькая группа и мягкая атмосфера.</p></div>
+        <div class="fact"><strong>4* отель</strong><p>Проживание в Сен-Мало с завтраками.</p></div>
+        <div class="fact"><strong>на русском</strong><p>Сопровождение, перевод и помощь на месте.</p></div>
+        <div class="fact"><strong>без спешки</strong><p>Маршрут с красивыми остановками и временем для себя.</p></div>
+      </div>
+    </section>
+
+    <section class="cream">
+      <div class="section intro-grid">
+        <div class="copy">
+          <span class="kicker">Вкус Бретани</span>
+          <h2>Гастрономия здесь не дополнение, а часть впечатления</h2>
+          <p>В поездке будем пробовать местные специалитеты: морские продукты, бретонские закуски, сидр, пиво и блюда, которые лучше всего раскрываются именно здесь, у океана.</p>
+          <div class="taste-grid">
+            <span>Устрицы</span>
+            <span>Гребешки</span>
+            <span>Морской паук</span>
+            <span>Галеты</span>
+            <span>Пате и риеты</span>
+            <span>Местный сидр</span>
+            <span>Бретонское пиво</span>
+            <span>Соленое масло</span>
+          </div>
+        </div>
+        <div class="photo portrait">
+          <img src="assets/women-bretagne/page3-image1.jpg" alt="Морепродукты в Бретани">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="kicker">Маршрут тура</span>
+      <h2>Программа по дням</h2>
+      <div class="days">
+        <article class="day">
+          <span class="day-num">День 1</span>
+          <h3>Ренн и сидр</h3>
+          <ul>
+            <li>Встреча в Ренне на вокзале</li>
+            <li>Прогулка по историческому центру и обед</li>
+            <li>Сидрерия и дегустация</li>
+            <li>Заселение в Сен-Мало</li>
+          </ul>
+        </article>
+
+        <article class="day">
+          <span class="day-num">День 2</span>
+          <h3>Канкаль и аббатство</h3>
+          <ul>
+            <li>Устричная ферма</li>
+            <li>Дегустация устриц у моря</li>
+            <li>Мон-Сен-Мишель, луга и фото</li>
+            <li>Посещение аббатства</li>
+          </ul>
+        </article>
+
+        <article class="day">
+          <span class="day-num">День 3</span>
+          <h3>Шеф и Сен-Мало</h3>
+          <ul>
+            <li>Кулинарное ателье с шефом</li>
+            <li>Обед из приготовленных блюд</li>
+            <li>Экскурсия по Сен-Мало</li>
+            <li>Свободное время для шопинга</li>
+          </ul>
+        </article>
+
+        <article class="day">
+          <span class="day-num">День 4</span>
+          <h3>Средневековый Динан</h3>
+          <ul>
+            <li>Выезд из отеля</li>
+            <li>Прогулка по Динану</li>
+            <li>Возвращение в Ренн</li>
+            <li>Финальные впечатления Бретани</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="cream">
+      <div class="section intro-grid">
+        <div class="photo landscape">
+          <img src="assets/women-bretagne/page8-image1.jpg" alt="Отель в Сен-Мало">
+        </div>
+        <div class="copy">
+          <span class="kicker">Проживание и ателье</span>
+          <h2>Отель 4* в Сен-Мало и кулинарное занятие с шефом</h2>
+          <p>Жить будем в элегантном отеле 4* недалеко от моря. В стоимость включено двухместное проживание с завтраками.</p>
+          <p>На третий день проведем утро в кулинарном ателье: готовим закуску, основное блюдо и десерт, разбираем продукты и техники бретонской кухни.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="kicker">Почему выбирают этот тур</span>
+      <h2>Теплая атмосфера, красивые места и забота о деталях</h2>
+      <div class="benefits">
+        <div class="benefit">Небольшая группа до 6 человек</div>
+        <div class="benefit">Русскоязычное сопровождение и перевод</div>
+        <div class="benefit">Комфортный маршрут на автомобиле</div>
+        <div class="benefit">Гастрономия Бретани: от устриц до сидра</div>
+        <div class="benefit">Красивые места для фото, видео и личных впечатлений</div>
+        <div class="benefit">Ключевые билеты и трансферы уже включены</div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="host-card">
+        <div class="host-photo">
+          <img src="assets/natalia-valle-mont-saint-michel.jpg" alt="Наталья Валье у Мон-Сен-Мишеля">
+        </div>
+        <div class="host-copy">
+          <span class="kicker">Ведущая тура</span>
+          <h2>Наталья Валье</h2>
+          <p>Я живу во Франции и создаю авторские маршруты по Бретани, Нормандии и Мон-Сен-Мишелю.</p>
+          <p>В этом туре я беру на себя маршрут, логистику, бронирования, перевод и общение на месте, чтобы поездка была легкой и понятной для участниц.</p>
+          <p>Мне важно показывать Францию не только через известные места, но и через атмосферу: рынки, локальные продукты, красивые дороги, маленькие города и истории, которые помогают почувствовать регион живым.</p>
+        </div>
+      </div>
+    </section>
+
+
+    
+
+    <section class="cream" id="order">
+      <div class="section price-grid">
+        <aside class="price-card">
+          <span class="kicker">Стоимость</span>
+          <div class="amount">1490 €<span>за участницу</span></div>
+          <ul>
+            <li><strong>Предоплата:</strong> 500 €</li>
+            <li><strong>Single-проживание:</strong> доплата 500 €</li>
+            <li><strong>Оставшаяся сумма:</strong> за 3 дня до тура переводом или наличными в день начала</li>
+            <li><strong>Не включено:</strong> обеды и ужины, вино и устрицы, билеты до Ренна</li>
+          </ul>
+          <a class="button primary" href="https://wa.me/33667033170?text=%d0%97%d0%b4%d1%80%d0%b0%d0%b2%d1%81%d1%82%d0%b2%d1%83%d0%b9%d1%82%d0%b5!+%d0%a5%d0%be%d1%87%d1%83+%d0%b2+%d0%b6%d0%b5%d0%bd%d1%81%d0%ba%d0%b8%d0%b9+%d0%b3%d0%b0%d1%81%d1%82%d1%80%d0%be%d0%bd%d0%be%d0%bc%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b9+%d1%82%d1%83%d1%80+%d0%91%d1%80%d0%b5%d1%82%d0%b0%d0%bd%d1%8c+%26+%d0%9c%d0%be%d0%bd-%d0%a1%d0%b5%d0%bd-%d0%9c%d0%b8%d1%88%d0%b5%d0%bb%d1%8c.+%d0%9f%d0%be%d0%b4%d1%81%d0%ba%d0%b0%d0%b6%d0%b8%d1%82%d0%b5%2c+%d0%bf%d0%be%d0%b6%d0%b0%d0%bb%d1%83%d0%b9%d1%81%d1%82%d0%b0%2c+%d0%ba%d0%b0%d0%ba%d0%b8%d0%b5+%d0%b4%d0%b0%d1%82%d1%8b+%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%bd%d1%8b%3a+11-14+%d1%81%d0%b5%d0%bd%d1%82%d1%8f%d0%b1%d1%80%d1%8f%2c+28+%d1%81%d0%b5%d0%bd%d1%82%d1%8f%d0%b1%d1%80%d1%8f+-+1+%d0%be%d0%ba%d1%82%d1%8f%d0%b1%d1%80%d1%8f+%d0%b8%d0%bb%d0%b8+4-7+%d0%be%d0%ba%d1%82%d1%8f%d0%b1%d1%80%d1%8f." target="_blank" rel="noopener">Спросить в WhatsApp</a>
+        </aside>
+
+        <section class="form-card">
+          <span class="kicker">Заявка</span>
+          <h2>Хочу в тур</h2>
+          <p>Заполните форму, и я отвечу по наличию мест, условиям бронирования и деталям программы.</p>
+
+          <form name="women-bretagne-gastro-tour" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
+            <input type="hidden" name="form-name" value="women-bretagne-gastro-tour">
+            <p class="bot-field">
+              <label>Не заполняйте это поле: <input name="bot-field"></label>
+            </p>
+
+            <label>
+              Ваше имя
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+
+            <label>
+              WhatsApp или Telegram
+              <input type="text" name="contact" autocomplete="tel" placeholder="+33..." required>
+            </label>
+            <label>
+              Дата тура
+              <select name="tour_date" required>
+                <option value="">Выберите</option>
+                <option>11-14 сентября</option>
+                <option>28 сентября - 1 октября</option>
+                <option>4-7 октября</option>
+              </select>
+            </label>
+            <div class="form-row">
+              <label>
+                Сколько вас?
+                <select name="people" required>
+                  <option value="">Выберите</option>
+                  <option>Я одна</option>
+                  <option>Нас двое</option>
+                  <option>Нас трое</option>
+                </select>
+              </label>
+
+              <label>
+                Проживание
+                <select name="room">
+                  <option>Двухместное размещение</option>
+                  <option>Хочу single-проживание</option>
+                  <option>Пока не знаю</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Что вам особенно хочется в этом туре?
+              <textarea name="wish" placeholder="Например: гастрономия, Мон-Сен-Мишель, фото, спокойный темп, новые знакомства, кулинарное ателье..."></textarea>
+            </label>
+
+            <label>
+              Вопросы или комментарий
+              <textarea name="message" placeholder="Можно написать про даты, перелет, поезд до Ренна, питание, пожелания по комнате..."></textarea>
+            </label>
+
+            <button class="submit" type="submit">Отправить заявку</button>
+            <div class="small">Форма рассчитана на Netlify Forms. Для быстрого ответа можно написать сразу в WhatsApp.</div>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-strip">
+    <span>WhatsApp / Telegram: +33 6 67 03 31 70</span>
+    <span>Instagram: @matryoshka_in_france</span>
+    <span>Бретань & Мон-Сен-Мишель</span>
+  </footer>
+</body>
+</html>

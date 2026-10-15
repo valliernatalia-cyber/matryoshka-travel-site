@@ -1,0 +1,13 @@
+.mt-cookie-notice,.mt-cookie-reopen{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;letter-spacing:normal;text-transform:none}
+.mt-cookie-notice[hidden],.mt-cookie-reopen[hidden]{display:none!important}
+.mt-cookie-notice{position:fixed;z-index:9999;left:20px;right:20px;bottom:20px;max-width:1060px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;padding:22px 26px;background:#fffdf8;color:#223027;border:1px solid #cfc4b2;border-radius:12px;box-shadow:0 12px 46px #14241b30;text-align:left;max-height:calc(100dvh - 40px);overflow:auto}
+.mt-cookie-copy{min-width:0}
+.mt-cookie-notice h2{font-family:Georgia,'Times New Roman',serif;font-size:23px;line-height:1.2;margin:0 0 8px;font-weight:500;color:#223027;letter-spacing:normal;text-transform:none}
+.mt-cookie-notice p{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;margin:0;color:#526156;max-width:690px}
+.mt-cookie-actions{display:flex;align-items:center;gap:20px;flex-shrink:0}
+.mt-cookie-actions a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;color:#284b36;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.mt-cookie-dismiss{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:46px;width:auto;margin:0;padding:12px 24px;border:1px solid #284b36;border-radius:7px;background:#284b36;color:#fffdf8;cursor:pointer;font:700 14px/1.3 Arial,Helvetica,sans-serif;text-transform:none;letter-spacing:normal;box-shadow:none}
+.mt-cookie-dismiss:hover{background:#1d3a29}
+.mt-cookie-reopen{appearance:none;position:fixed;z-index:9998;left:12px;bottom:12px;display:inline-flex;align-items:center;justify-content:center;width:auto;min-height:44px;margin:0;padding:10px 16px;border:1px solid #cfc4b2;border-radius:7px;background:#fffdf8;color:#284b36;box-shadow:0 3px 14px #14241b1a;cursor:pointer;font:600 13px/1.3 Arial,Helvetica,sans-serif}
+.mt-cookie-notice a:focus-visible,.mt-cookie-notice button:focus-visible,.mt-cookie-reopen:focus-visible{outline:3px solid #b17b28;outline-offset:4px}
+@media(max-width:650px){.mt-cookie-notice{left:12px;right:12px;bottom:12px;padding:19px;gap:14px;grid-template-columns:minmax(0,1fr);max-height:calc(100dvh - 24px)}.mt-cookie-notice h2{font-size:21px}.mt-cookie-actions{justify-content:space-between;gap:16px}.mt-cookie-dismiss{min-width:122px}}
